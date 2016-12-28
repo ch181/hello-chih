@@ -1,0 +1,32 @@
+name: hello-chih # you probably want to 'snapcraft register <name>'
+version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+summary: hello hello, chih
+description: |
+  This is my-snap's description. You have a paragraph or two to tell the
+  most important story about your snap. Keep it under 100 words though,
+  we live in tweetspace and your description wants to look good in the snap
+  store.
+
+confinement: strict
+grade: stable
+
+apps:
+  hello:
+    command: hello
+  bash:
+    command: bash
+parts:
+  gnu-hello:
+    plugin: autotools
+    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
+
+  gnu-bash:
+    source: http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
+    plugin: autotools
+    configflags: ["--infodir=/var/bash/info"]
+
+  crafted-bits:
+    plugin: x-crafty
+    source: src/crafty
+    crafty-target: sometarget
+
