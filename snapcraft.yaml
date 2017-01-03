@@ -25,8 +25,3 @@ parts:
     plugin: autotools
     configflags: ["--infodir=/var/bash/info"]
 
-  crafted-bits:
-    plugin: x-crafty
-    source: src/crafty
-    crafty-target: sometarget
-
