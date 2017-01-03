@@ -1,5 +1,5 @@
 name: hello-chih # you probably want to 'snapcraft register <name>'
-version: '0.1' # just for humans, typically '1.2+git' or '1.3.2'
+version: '0.2' # just for humans, typically '1.2+git' or '1.3.2'
 summary: hello hello, chih
 description: |
   This is my-snap's description. You have a paragraph or two to tell the
@@ -21,7 +21,7 @@ parts:
     source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
 
   gnu-bash:
-    source: http://ftp.gnu.org/gnu/bash/bash-4.3.tar.gz
+    source: http://ftp.gnu.org/gnu/bash/bash-4.4.tar.gz
     plugin: autotools
     configflags: ["--infodir=/var/bash/info"]
 
